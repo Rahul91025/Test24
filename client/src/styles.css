@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-slate-200; }
+  html { scroll-behavior: smooth; }
+  body { @apply m-0 bg-white font-sans text-slate-700 antialiased; }
+  button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+  button, a { @apply transition; }
+}
+
+@layer components {
+  .container { @apply mx-auto w-full max-w-[1180px] px-5 sm:px-7; }
+  .section { @apply py-20 md:py-24; }
+  .eyebrow { @apply inline-flex items-center rounded-full bg-brand-50 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-600; }
+  .btn-primary { @apply inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3.5 text-sm font-bold text-white shadow-glow hover:-translate-y-0.5 hover:bg-brand-700; }
+  .btn-secondary { @apply inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-bold text-ink hover:-translate-y-0.5 hover:border-brand-500 hover:text-brand-600; }
+  .btn-light { @apply inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-ink hover:-translate-y-0.5; }
+  .btn-ghost { @apply inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 text-sm font-bold text-white hover:bg-white/10; }
+  .nav-link { @apply relative py-7 text-sm font-bold text-slate-600 hover:text-brand-600; }
+  .nav-link::after { content: ""; @apply absolute bottom-4 left-0 h-0.5 w-0 bg-brand-600 transition-all; }
+  .nav-link:hover::after, .nav-link.active::after { @apply w-full; }
+  .nav-link.active { @apply text-brand-600; }
+  .service-card { @apply rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-100 hover:shadow-soft; }
+  .icon-box { @apply grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600; }
+  .field { @apply block; }
+  .field span { @apply mb-2 block text-xs font-bold uppercase tracking-wide text-slate-600; }
+  .field input, .field select, .field textarea { @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:bg-white focus:ring-4 focus:ring-brand-100; }
+  .footer-title { @apply mb-5 font-display text-base font-bold text-white; }
+  .footer-links { @apply flex flex-col gap-3 text-sm text-blue-200; }
+  .footer-links a { @apply hover:translate-x-1 hover:text-white; }
+  .text-gradient { @apply bg-gradient-to-r from-blue-300 via-white to-amber bg-clip-text text-transparent; }
+}
+
+@media (max-width: 640px) {
+  .section { @apply py-16; }
+}
