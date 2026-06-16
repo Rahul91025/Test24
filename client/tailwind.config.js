@@ -4,24 +4,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#07162d",
-        brand: {
-          50: "#eff8ff",
-          100: "#dcefff",
-          500: "#1478e8",
-          600: "#0864cc",
-          700: "#0751a5",
-          900: "#0b2d5c"
+        ink: "#0A1628",
+        surface: "#F8FAFF",
+        amber: "#F59E0B",
+        gold: {
+          300: "#FDE68A",
+          400: "#FBBF24",
+          500: "#F59E0B",
+          600: "#D97706",
+          700: "#B45309",
         },
-        amber: "#ffb21c"
+        brand: {
+          50: "#EFF6FF",
+          100: "#DBEAFE",
+          200: "#BFDBFE",
+          400: "#60A5FA",
+          500: "#3B82F6",
+          600: "#2563EB",
+          700: "#1D4ED8",
+          800: "#1E40AF",
+          900: "#1E3A8A",
+        }
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Manrope", "Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+        sans: ['"Plus Jakarta Sans"', "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ['"Space Grotesk"', '"Plus Jakarta Sans"', "Inter", "ui-sans-serif"]
       },
       boxShadow: {
-        soft: "0 18px 50px rgba(7, 22, 45, 0.09)",
-        glow: "0 12px 30px rgba(20, 120, 232, 0.28)"
+        luxury: "0 32px 80px rgba(10,22,40,0.14)",
+        card: "0 4px 24px rgba(10,22,40,0.07), 0 1px 3px rgba(10,22,40,0.04)",
+        "card-hover": "0 20px 56px rgba(10,22,40,0.13)",
+        soft: "0 20px 60px rgba(10,22,40,0.09)",
+        glow: "0 8px 32px rgba(37,99,235,0.32)",
+        "glow-gold": "0 8px 32px rgba(245,158,11,0.32)",
       }
     }
   },
